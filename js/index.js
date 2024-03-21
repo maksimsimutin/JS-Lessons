@@ -199,26 +199,80 @@
 // else 
 // console.log(res2);
 
-function btnClick () {
-    console.log('Massenger');
-}
+// function btnClick () {
+//     console.log('Massenger');
+// }
 
-let counter = 0;
-function btnOnceClick(el) {
-    counter++;
-    el.innerHTML = 'Count: ' + counter;
-    // el.name = 'New value';
-    // alert(el.name);
-}
+// let counter = 0;
+// function btnOnceClick(el) {
+//     counter++;
+//     el.innerHTML = 'Count: ' + counter;
+//     // el.name = 'New value';
+//     // alert(el.name);
+// }
 
-function userInput(el) {
-    if (el.value == 'font')
-        el.style.fontSize = '20px';
-    else if (el.value == 'color')
-        el.style.color = 'red';
-    else if (el.value == 'bg')
-        el.style.backgroundColor = '#333';
-}
+// function userInput(el) {
+//     if (el.value == 'font')
+//         el.style.fontSize = '20px';
+//     else if (el.value == 'color')
+//         el.style.color = 'red';
+//     else if (el.value == 'bg')
+//         el.style.backgroundColor = '#333';
+// }
       
+// let block = document.getElementById('some-block');
+// block.innerHTML = 'Hello, <b>World</b>';
+// block.style.color = 'red';
+// block.style.backgroundColor = '#333';
+// block.className = 'block';
+
+// console.log(block.classsName);
+
+// document.getElementById('para').innerHTML = 'New text';
+
+// // let spans = document.getElementsByTagName('span');
+// let spans =document.getElementsByClassName('el-span');
+
+// for (let i = 0; i < spans.length; i++) {
+//     spans[i].style.fontSize = '20px';
+//     spans[i].title = spans[i].innerText + '!';
+// }
+
+document.getElementById('myform').addEventListener('submit', function (e) {
+    e.preventDefault();
+     
+    let el = document.getElementById('myform');
+
+    let username = el.username.value;
+    let email = el.email.value;
+    let pass = el.password.value;
+    let gender = el.gender.value;
+
+    let error = '';
+    if (username.length < 2)
+        error = 'Ім\ʼя занадто коротке';
+    else if (email.length < 2)
+        error = 'Email занадто короткий';
+    else if (!email.includes('@'))
+        error = 'Email не має @';
+    else if (pass.length < 2)
+        error = 'password занадто короткий';
+    else if (gender == null || gender == '')
+        error = 'Gender error';
+
+    if (error != '') {
+        document.getElementById('error').innerText = error;
+        return false;
+    }
+        document.getElementById('error').innerText = '';  
+        window.location = 'https://www.blackbox.ai';      
+
+    return false;
+
+});
+
+
+   
+
 
 

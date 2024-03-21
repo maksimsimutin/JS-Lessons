@@ -4,13 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <noscript>JS not work</noscript>
 
-    <button name="btn" ondblclick="btnClick()" onclick="btnOnceClick(this)">Натисни на мене</button>
+     <!-- Функции 
 
-    <input type="text" oninput="userInput(this)">
+     <button name="btn" ondblclick="btnClick()" onclick="btnOnceClick(this)">Натисни на мене</button>
+
+     <input type="text" oninput="userInput(this)"> --> 
+
+    <!-- <div id="some-block"></div>
+    <p id="para" class="el-span"></p>
+
+    <span class="el-span">Span 1</span>
+    <span class="el-span">Span 2</span>
+    <span>Span 3</span> -->
+
+    <form id="myform">
+        <input type="text" name="username" placeholder="Введіть імʼя"><br>
+        <input type="email" name="email" placeholder="Введіть email"><br>
+        <input type="password" name="password" placeholder="Введіть пароль"><br>
+        <input type="radio" name="gender" value="male"> Чоловік <br>
+        <input type="radio" name="gender" value="female"> Жінка <br>
+        <span id="error"></span>
+        <button>Надіслати</button>
+    </form>
 
     <script src="js/index.js"></script>
 </body>
