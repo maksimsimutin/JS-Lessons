@@ -238,38 +238,106 @@
 //     spans[i].title = spans[i].innerText + '!';
 // }
 
-document.getElementById('myform').addEventListener('submit', function (e) {
-    e.preventDefault();
+// document.getElementbyid('myform').addEventListener('submit', function (e) {
+//     e.preventDefault();
      
-    let el = document.getElementById('myform');
+//     let el = document.getElementById('myform');
 
-    let username = el.username.value;
-    let email = el.email.value;
-    let pass = el.password.value;
-    let gender = el.gender.value;
+//     let username = el.username.value;
+//     let email = el.email.value;
+//     let pass = el.password.value;
+//     let gender = el.gender.value;
 
-    let error = '';
-    if (username.length < 2)
-        error = 'Ім\ʼя занадто коротке';
-    else if (email.length < 2)
-        error = 'Email занадто короткий';
-    else if (!email.includes('@'))
-        error = 'Email не має @';
-    else if (pass.length < 2)
-        error = 'password занадто короткий';
-    else if (gender == null || gender == '')
-        error = 'Gender error';
+//     let error = '';
+//     if (username.length < 2)
+//         error = 'Ім\ʼя занадто коротке';
+//     else if (email.length < 2)
+//         error = 'Email занадто короткий';
+//     else if (!email.includes('@'))
+//         error = 'Email не має @';
+//     else if (pass.length < 2)
+//         error = 'password занадто короткий';
+//     else if (gender == null || gender == '')
+//         error = 'Gender error';
 
-    if (error != '') {
-        document.getElementById('error').innerText = error;
-        return false;
+//     if (error != '') {
+//         document.getElementById('error').innerText = error;
+//         return false;
+//     }
+//         document.getElementById('error').innerText = '';  
+//         window.location = 'https://www.blackbox.ai';      
+
+//     return false;
+
+// });
+
+// таймер и интервалі
+
+// let timerid = setTimeout (function(){
+//     alert('Message');
+// }, 7000);
+
+// let id = setInterval (my_func, 1000);
+
+// let counter = 0;
+
+// function my_func() {
+//     document.getElementById('timer').innerHTML = 'Counter: ' + counter;  // 1 варіант
+//     counter++;
+// }
+
+// function stopInterval() {
+//     // clearInterval(id);
+//     clearTimeout(timerid);
+// }
+
+// setInterval (function() {   
+//     console.log('Sec...')   // 2 варіант
+// }, 2000);
+
+// створення обьєктів 
+
+// setInterval(function() {
+//     let date = new Date();
+//     let time = 'Час: ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
+
+//     document.getElementById('time').innerText = time;
+// }, 1000 );
+
+// let arr = [0, 4, 1, 'some', false];
+// console.log(arr.sort().reverse());
+
+// let user = prompt('Enter films: ');
+// let films = user.split(',');
+// console.log(films.join('-'));
+
+class Person {
+
+    name = ''
+    age = 0
+    bio = ''
+
+    constructor (name, age, bio) {
+        this.name = name
+        this.age = age 
+        this.bio = bio
     }
-        document.getElementById('error').innerText = '';  
-        window.location = 'https://www.blackbox.ai';      
 
-    return false;
+    info () {
+        console.log('Людина; ' + this.name + '. Вік: ' + this.age + '. Біо: ' + this.bio)
+    }
+}
 
-});
+let alex = new Person ('Alex', 25, 'some one');
+let bob = new Person ('Bob', 30, 'some this');
+
+alex.info();
+bob.info();
+
+
+
+
+
 
 
    
